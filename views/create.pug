@@ -1,0 +1,17 @@
+extends layout
+block content
+  div.container#contain
+    h1= title
+    form(action="/app/create", method="post")
+      .form-group
+        label(for="firstName") First Name
+        input(type="text", name="firstName").form-control#firstName
+      .form-group
+        label(for="lastName") Last Name
+        input(type="text", name="lastName").form-control#lastName
+      button(type="submit").btn.btn-primary Submit
+    if data
+      p=data.lastName
+    else 
+      p aucune donnée
+  

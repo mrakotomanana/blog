@@ -1,8 +1,18 @@
 html
   head
     title My Site - #{title}
+    link(rel='stylesheet', type='text/css', href='/static/styles/bootstrap.min.css')
+    style(type='text/css') body{ padding-top: 3.5rem;}
   body
+    block navContent
+      nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+        a.navbar-brand(href='/app') Dashboard
+
+        div.collapse.navbar-collapse#navbarsExampleDefault
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link.active(href='/app/create') Create
     block content
     block foot
-      #footer
+      div.container#footer
         p some footer content
