@@ -1,0 +1,15 @@
+extends ../layout
+
+block navContent
+      nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+        a.navbar-brand(href='/') Home
+
+        div.collapse.navbar-collapse#navbarsExampleDefault
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link.active(href='/app/create') Create
+
+block content
+  div.container#contain
+    h1= title
+    p Welcome to #{title}

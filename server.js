@@ -1,7 +1,8 @@
 const express = require("express");
 
 const path = require("path");
-const router = require("./routes/index");
+const index = require("./routes/index");
+const todo = require("./routes/todo");
 const config =  require('./config.js');
 
 const port = config.PORT;
@@ -18,7 +19,8 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
-app.use("/app", router);
+app.use("/app", index);
+app.use("/todo", todo);
 
 const start = async () => {
   try {

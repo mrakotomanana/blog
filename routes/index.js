@@ -13,7 +13,7 @@ router.use(function (req, res, next) {
 
 router.get("/", function (req, res) {
   console.log(res.body);
-  res.render("index", { title: "Express" });
+  res.render("app/index", { title: "Express" });
 });
 
 router.get("/lastName/:name", function (req, res) {
@@ -36,11 +36,11 @@ router.get("/lastName/:name", function (req, res) {
   });
 
   db.close();
-  res.render("index", { title: "Express" });
+  res.render("app/index", { title: "Express" });
 });
 
 router.get("/create", function (req, res) {
-  res.render("create", { title: "Create Recorder" });
+  res.render("app/create", { title: "Create Recorder" });
 });
 
 router.post("/create", function (req, res) {
